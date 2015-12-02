@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Wines</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Img url</th>
+      <th>Origin</th>
+      <th>Type</th>
+      <th>Size</th>
+      <th>Price</th>
+      <th>Company</th>
+      <th>Suit veg</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @wines.each do |wine| %>
+      <tr>
+        <td><%= wine.Title %></td>
+        <td><%= wine.Description %></td>
+        <td><%= wine.Img_url %></td>
+        <td><%= wine.Origin %></td>
+        <td><%= wine.Type %></td>
+        <td><%= wine.Size %></td>
+        <td><%= wine.Price %></td>
+        <td><%= wine.Company %></td>
+        <td><%= wine.Suit_veg %></td>
+        <td><%= link_to 'Show', wine %></td>
+        <td><%= link_to 'Edit', edit_wine_path(wine) %></td>
+        <td><%= link_to 'Destroy', wine, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Wine', new_wine_path %>

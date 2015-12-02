@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @wine.Title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @wine.Description %>
+</p>
+
+<p>
+  <strong>Img url:</strong>
+  <%= @wine.Img_url %>
+</p>
+
+<p>
+  <strong>Origin:</strong>
+  <%= @wine.Origin %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @wine.Type %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @wine.Size %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @wine.Price %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @wine.Company %>
+</p>
+
+<p>
+  <strong>Suit veg:</strong>
+  <%= @wine.Suit_veg %>
+</p>
+
+<%= link_to 'Edit', edit_wine_path(@wine) %> |
+<%= link_to 'Back', wines_path %>
